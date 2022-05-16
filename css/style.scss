@@ -1,0 +1,1080 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+body{
+  font-family: 'Noto Sans KR', 'Nanum Pen Script', 돋움;
+  background-color: rgb(0, 0, 0);
+
+#wrap{
+
+  // width: 1920px;
+  width: 1900px;
+  margin: 0 auto;
+
+  background-color: #fff;
+
+  >header{
+    position: relative;
+    background-color: rgb(22, 22, 22);
+    // padding: 0 30px;
+
+    height: 80px;
+
+    
+    //서브메뉴 배경판
+    >.bg_lnb{
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 80px;
+      width: 100%;
+      height: 430px;
+      background-color: rgb(22, 22, 22);
+      border-top: 2px solid rgba(75, 75, 75, 0.809);
+      text-indent: -9999px;
+      z-index: 9;
+    }//end of .bg_lnb
+
+    >.container{
+      position: relative;
+      width: 98%;
+      height: 80px;
+      margin: 0 auto;
+      // outline: 1px solid red;      
+
+      >h1.logo{
+        position: absolute;
+        left: 10px;
+        top: 18px;
+        width: 125px;
+        height: 50px;
+        background-image: url(../images/logo.cae2c042.svg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+        >a{
+          display: block;
+          height: 69px;
+          text-indent: -9999px;
+        }
+      }//end of .logo
+
+      >.icon{
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+      >li{
+
+          >.search{
+              display: block;
+              width: 60px;
+              height: 80px;
+              line-height: 80px;
+              background-image: url(../images/ic_search.ccca8201.svg);
+              background-repeat: no-repeat;
+              background-position: 50% 50%;
+              text-indent: -9999px;
+          } //end of icon a
+
+          >.login{
+            display: block;
+            width: 60px;
+            height: 80px;
+            line-height: 80px;
+            background-image: url(../images/ic_mypage.22c9f386.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            text-indent: -9999px;
+        } //end of icon a
+
+        >.shop{
+            display: block;
+            width: 60px;
+            height: 80px;
+            line-height: 80px;
+            background-image: url(../images/ic_cart.eeeb4a13.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            // text-indent: -9999px;
+
+            >span{
+                position: absolute;
+                top: 40px;
+                right: 8px;
+
+                display: block;
+                width:20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                color: white;
+                font-size: 11px;
+                font-weight: 500;
+                border-radius: 50%;
+                background-color: rgb(72, 90, 255);
+            }
+        } //end of a
+      } //end of li
+    } //end of icon
+
+      >nav{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -520px;
+        z-index: 20;
+        
+        >.gnb{
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+
+          width: 1100px; 
+          z-index: 30;        
+          
+          >li{
+              width: 220px;
+              height: 80px;
+              line-height: 80px;
+              text-align: center;
+
+            >a{
+              display: block;
+              color: white;
+              height: 80px;
+
+              font-size: 20px;
+              font-weight: 800;
+            }//end of a
+
+
+            >.lnb{
+              display: none;
+              margin-top: 35px;
+              z-index: 40;
+
+              >li{
+
+                >a{
+                  display: block;
+                  height: 60px;
+                  line-height: 60px;
+                  color: #fff;
+
+                  font-size: 18px;
+                  text-indent: 10px;
+
+                  &:hover{
+                    color: rgb(91, 118, 255);
+                  }
+                }//end of a
+              }//end of li
+            }//end of .lnb
+          }//end of li
+        }//end of .gnb
+      }//end of nav
+    }//end of .container
+  }//end of header
+  
+  // ------------------------------------- ◆ section-visual slide ◆
+  >.visual-slide{
+    position: relative;
+    height: 900px;
+
+    // ------------------------------------- right-left a section a
+    >p{
+      display: flex;
+      height: 900px;
+      text-indent: -9999px;
+
+      >a{
+          display: block;
+          width: calc(100% / 2);
+          height: 900px;
+          text-indent: -9999px;
+
+          z-index: 10;
+      } //end of a
+
+      >a.prev:hover{     
+          cursor: url(./../images/arrow_l.935a967c.cur),auto;      
+      } //end of a.left
+
+      >a.next:hover{
+          cursor: url(./../images/arrow_r.1db549d7.cur),auto;
+        } //end of a.right
+      } //end of p
+
+      // ------------------------------------- slide visuals
+      
+      >.slides {
+        overflow: hidden;
+        // position: relative;
+        width: 100%;
+        height: 900px;
+        margin: 0 auto;
+        
+        >.slides-container {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          
+          >p {
+             display: none;
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 900px;
+
+             object-fit: cover;
+             overflow: hidden;
+
+             >.tag{
+              >a{
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 200px;
+                margin-top: -80px;
+                color: rgba(255, 255, 255, 0.688);
+                font-size: 16px;
+
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+              } //end of a
+             } //end of tag
+
+             >.more{
+
+              >a{
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 200px;
+                margin-top: 100px;
+                color: white;
+                font-size: 28px;
+                font-weight: 900;
+
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+
+                cursor: pointer;
+                z-index: 50;
+              } //end of a
+             } //end of more
+
+
+              > a {
+                display: block;
+                height: 900px;
+
+              } //end of a
+            } //end of p
+              
+
+            >p.slide-3{
+              >a{
+
+                >video{
+                  width: 100%;              
+                  object-fit: cover;
+                }
+              }
+            }
+
+          } //end of slide-container
+
+          // ------------------------------------- progress bar
+
+          .progress {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            right: 50%;
+            bottom: 150px;
+            width: 150px;
+            margin-right: -40%;
+            font-size: 13px;
+
+            >.current{
+              font-size: 18px;
+              font-weight: 900;
+              color: white;
+            } //end of current
+
+            > .bar {
+              position: absolute;
+              left: 70px;
+              top: 15px;
+              z-index: 10;
+              width: 0;
+              height: 2px;
+              text-indent: -9999px;
+              background-color: #dedede;
+            } //end of bar
+
+            >.total{
+              font-size: 16px;
+              font-weight: 900;
+              color: rgba(0, 0, 0, 0.224);
+            } //end of toal
+          } //end of progress
+
+          &>.progress:after {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            width: 40px;
+            height: 2px;
+            margin-left: -2px;
+            background-color: rgba(0, 0, 0, 0.107);
+            content: '';
+          } //end of progress:after
+          
+        } //end of slide
+      
+      } //end of visual-slide
+
+      // ------------------------------------- ◆ section-half slide ◆
+
+      >#half-slide{
+        display: flex;
+        // width: calc(50% * 4);
+
+        >#leftslide{
+          width: 50%;
+          height: 900px;
+
+          background-color: rgba(255, 11, 11, 0.412);
+          
+          >.showbox{
+            overflow: hidden;
+            position: relative; //기준점
+        
+            width: 100%;
+            height: 900px ;
+
+            >#display{
+              display: flex;
+              flex-flow: row nowrap;
+              position: absolute; //screen 기준
+              top: 0;
+              left: 0;
+  
+              width: calc(100% * 4);
+              
+              >li{
+                width: 100%;
+                height: 900px;
+                display: block;
+                background-size: cover;
+                background-position: center center;
+                text-indent: -9999px;
+
+          }
+
+          >li:nth-child(1){
+            background-image: url(../images/메인_추천상품배너_01.jpg);
+          }
+
+          >li:nth-child(2){
+            background-image: url(../images/메인_추천상품배너_02.jpg);
+          }
+
+          >li:nth-child(3){
+            background-image: url(../images/메인_추천상품배너_03.jpg);
+          }
+
+          >li:nth-child(4){
+            background-image: url(../images/메인_추천상품배너_04.jpg);
+          }
+        } //end of display
+      } //end of showbox
+    } //end of left-slide
+        
+        >#slides{
+          position: relative; //이전다음
+
+          width: 50%;
+          height: 900px;
+
+          background-color: rgba(218, 218, 218, 0.412);
+          
+          >.screen{
+          overflow: hidden;
+          position: relative; //기준점
+      
+          width: 90%;
+          height: 500px ;
+
+          margin: 200px 0 200px 90px;      
+      
+          >.right-container{ 
+            display: flex;
+            flex-flow: row wrap;
+            position: absolute; //screen 기준
+            top: 0;
+            left: 0;
+            
+            width: calc(500px * 4 + 100px);
+            
+            >li{
+              width: 500px;
+              height: 500px;
+              margin-right: 100px;
+             
+              
+              
+      
+              &.on{
+                position: relative; 
+                z-index: 100;
+      
+                >a{
+                  >img{
+                    transition: all 0.35s ease-in-out;
+                  }
+                }
+              } //end of .on
+      
+              >a{
+                display: block;
+                background-color: #fff;
+                
+                >img{
+                  display: block;
+                  width: 100%;
+                  transition: all 0.35s ease-in-out;
+                   
+                   &:hover{
+                    transform: scale(1.2);
+                  }
+                  
+
+                } //end of img
+              } //end of a
+            } //end of li
+          } //end of slides-container
+        } // end of screen
+      
+      
+         // 이전다음
+         >a{
+          display: block;
+          position: absolute;//slides 기준
+          top: 50%;
+          right: 0;
+          width: 230px;
+          height: 500px;
+          margin-top: -250px;
+          text-indent: -9999px;
+
+          &.next{
+            cursor: url(./../images/arrow_r.1db549d7.cur),auto;
+          } //end of a.right
+      
+        } //end of a
+      } //end of slides
+    
+
+      }//end of half-slide
+      
+// ------------------------------------- ◆ section- event ◆
+  >#event{
+    background-color: #fff;
+    
+    >h2{
+      display: block;
+      width: 100%;
+      height: 100px;
+
+      font-size: 38px;
+      line-height: 100px;
+      text-align: center;
+
+      // border: 1px solid #000;
+     }
+    }
+
+  // ------------------------------------- ◆ section- eventproduct ◆
+
+  >#product{
+
+    background-color: #fff;
+
+    >.bannerbg{
+      position: relative;
+
+        display: block;
+        width: 98%;
+        height: 700px;
+        margin: 0 auto;
+        background-image: url(../images/PC_Main-Event-Banner-L_B.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-color: rgb(228, 54, 54);
+
+        >.txt{
+          display: inline-block;
+          position: relative;
+          top: 300px;
+          left: 200px;
+
+          // border: 1px solid #000;
+          
+        >p:nth-child(1){
+          font-size: 50px;
+          font-weight: 800;
+        }
+        
+        >p:nth-child(2){
+          height: 50px;
+          line-height: 50px;
+          font-size: 20px;
+          font-weight: 700;
+        } 
+        } //end of txt
+
+
+        >#frame-slide{
+          position: relative; //이전다음
+          top: 80px;
+          left: 50%;
+
+          margin-left: 300px;
+
+          width: 400px;
+          height: 400px;
+
+          // background-color: rgba(205, 70, 70, 0.412);
+
+          >.frame{
+            position: relative; //기준점
+            overflow: hidden;
+            
+            
+            width: 100%;
+            height: 400px ;
+            
+            // border: 1px solid #000;
+            
+            >.item-container{
+              display: flex;
+              flex-flow: row wrap;
+              position: absolute; //screen 기준
+              top: 0;
+              left: 0;
+              
+              width: calc(400px * 2);
+
+              >li{
+                width: 400px;
+                height: 400px;
+                
+                
+                &.on{
+                  position: relative; //prev버튼 클릭시 자연스러운 효과 필요
+                  z-index: 100;
+                  
+                  >a{
+                    >img{
+                      background-position: center center;
+
+                      &:hover{
+                        transform: scale(1.2); //카드가 겹쳐지는 폭을 50px로 정함
+                        transition: all 0.35s ease-in-out;
+    
+                      }
+                    }
+                  }
+
+                  >span{
+                    display: none;
+                    position: absolute;
+                    // top: 0;
+                    bottom: 0;
+                    left: 20%;
+
+                    font-size: 16px;
+                    font-weight: 700;
+
+                    >.price{
+                      font-size: 27px;
+                    }
+
+                  }
+                } //end of .on
+        
+                >a{
+                  display: block;
+                  background-color: #fff;
+        
+                  >img{
+                    display: block;
+                    width: 100%;          
+  
+                  } //end of img
+                } //end of a
+              } //end of li
+            } //end of item-container
+          } //end of frame
+        } //end of frame-slide
+
+        >a{
+          display: block;
+
+          width: 60px;
+          height: 60px;
+
+          color: white;
+          background-color: rgba(158, 158, 158, 0.454);
+          border-radius: 50%;
+
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 60px;
+          text-align: center;
+          z-index: 100;
+
+          &:hover{
+            outline: 3px solid rgba(255, 255, 255, 0.841);
+          }
+
+          &.prev{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin-right: -250px;
+            
+          }
+
+          &.next{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin-right: -820px;
+          }
+        }
+    } //end of banngerbg
+  } //end of product
+
+    // ------------------------------------- ◆ section- ad ◆
+  >#ad{
+    width: 100%;
+    height: 800px;
+
+    background-color: rgb(255, 255, 255);
+    
+    >#ad-slide{
+      position: relative; //이전다음
+      top: 20px;
+      // left: 50%;
+      
+      // margin-left: 300px;
+      
+      width: 98%;
+      height: 600px;
+      margin: 0 auto;
+      
+      // >.adframe{
+
+      // // overflow: hidden;
+      // position: relative; //기준점
+      
+      // width: 100%;
+      // height: 200px;
+      
+      // border: 10px solid rgb(50, 73, 50);
+      
+      >.ad-container{
+        display: flex;
+        justify-content: space-between;
+        height: 600px;
+
+        >li{
+          width: 32%;
+          height: 600px;
+          // border: 1px solid #000;
+          
+          >a{
+            // width: 100%;
+            height: 600px;
+            display: block;
+            overflow: hidden;
+            
+            >img{
+              display: block;
+              background-size: cover;
+              background-position: center center;
+              
+              transition: all .5s ease-in-out;
+
+              // border: 1px solid #000;
+
+              &:hover{ 
+                transform: scale(108%);
+
+              } //end of hover
+            } //end of img
+          } //end of a
+
+          >.hook{
+            position: absolute;
+            bottom:30px;
+
+            >.entitle{
+
+              >a{
+                display: block;
+                font-size: 35px;
+                font-weight: 700;
+
+                padding: 0 50px;
+
+              }//end of a
+            } //end of entitle
+
+            >.dscrpt{
+
+              >a{
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+                padding: 0 50px;
+
+              } //end of a
+            } //end of dscrpt
+          } //end of hook
+        } //end of li
+        
+      } //ad of ad-container
+    // } //end ad-frame
+  } //end of ad slide
+
+  >p{
+    >a{
+      position: relative;
+      top: 30px;
+      display: block;
+      font-size: 24px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+
+    } //end of a
+  } //end of p
+} //end of ad
+
+>#transition{
+  height: calc(800px + 50px);
+  background-color: rgb(234, 234, 234);
+  overflow: hidden;
+
+  
+  >.trick{
+    width: 100%;
+    height: 800px;
+    
+    
+    >.trs-frame{
+      position: relative;
+
+
+    >.slides{
+    display: flex;
+    flex-direction: row-reverse;
+    
+    
+    >p{
+      overflow: hidden;
+      width: 480px;
+      height: 600px;
+      transition: all 0.3s ease-in-out 0s;
+      
+      border-right: 2px solid rgb(179, 179, 179);
+      background-position: 500px 1000px;
+
+      background-color: rgb(234, 234, 234);
+      
+      &:hover{
+        width: 650px;
+        margin-left: -150px;
+        background-color: rgba(91, 88, 255, 0.692);
+
+      }
+
+      &:nth-child(4):hover{
+        width: 650px;
+        margin-left: -200px;
+        background-color: rgba(91, 88, 255, 0.692);
+      }
+
+      >img{
+        display: block;
+        background-size: cover;
+
+        margin-left: 200px;
+        margin-top: 40px;
+
+        
+      } //end of img
+
+    } //end of p
+  } //end of slide
+
+  
+  >.txt{
+    position: absolute;
+    bottom: 50px;
+    
+    >.txtbox{
+      display: flex;
+
+      >p{
+        width: 480px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        font-weight: 700;
+        text-indent: 30px;
+      }
+    }
+  }
+  
+} //end of trs-frame
+} //end of trick
+
+  >p{
+    height: 100px;
+    padding-top: 100px;
+    line-height: 100px;
+
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+  }
+} //end of transition
+
+>#banner{
+  background-color: rgb(234, 234, 234);
+  
+  >.click{
+    position: relative;  
+    
+    >.bframe{
+    font-size: 50px;
+    display: block;
+    width: 100%;
+    height: 440px;
+  
+    background-image: url(../images/03_PC_AA_Banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-indent: -9999px;
+  }
+
+    
+    >.txt{
+      display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  >a{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 100px;
+    margin-left: -200px;
+
+    font-size: 20px;
+    font-weight: 600;
+  } //end of a
+
+  } //end of click
+
+ 
+} //end of banner
+
+>footer{
+  padding: 50px 100px 100px;
+  color: rgb(206, 206, 206);
+  background-color: rgb(18, 18, 18);
+
+  >.subfooter{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    >.lf-container{
+
+      >.leftside{
+
+        >.lawinfo{
+          display: flex;
+          justify-content: space-between;
+          width: 500px;
+          height: 50px;
+          line-height: 50px;
+          
+          >li{
+            
+            
+            >a{
+              display: inline-block;
+              padding: 0 20px;
+              // border-right: 1px solid gray;
+              color: rgb(206, 206, 206);
+              
+            }
+          }
+        }//end of law info
+      }//end of leftside
+
+      >.rights{
+        margin-bottom: 20px;
+
+        >.comments{
+          width: 600px;
+
+          >li{
+            
+            &:before{
+              content: '＊';
+            }
+
+          }
+
+          >li:nth-child(3){
+            &:before{
+              content: '';
+            }
+          }
+        }
+      }//end of rights
+    }//end of lf-container
+
+    >.rf-container{
+      width: 35%;
+
+      >.social{
+        display: flex;
+        font-weight: 700;
+        margin-bottom: 40px;
+
+        >p{
+          border: 1px solid #000;
+          
+          >a{
+            display: block;
+
+            
+            >i{
+              padding: 0 20px;
+              color: rgb(206, 206, 206);
+              font-size: 25px;
+            }
+           
+          }
+        }
+
+        >.follow{
+          font-size: 24px;
+          margin-right: 50px;
+        }
+      }//end of social
+
+      >.family{
+        position: relative;
+
+        >.btns{
+          
+          >button{
+            width: 250px;
+            padding: 10px 0px;
+            margin-right: 10px;
+            color: rgb(206, 206, 206);
+            background-color: rgb(79, 79, 79);
+          }
+        }//end of btns
+
+        >.hide{
+          display: none;
+          position: absolute;
+          bottom: 60px;
+
+          width: 230px;
+          padding: 10px;
+          background-color: rgb(61, 61, 61);
+
+          >p{
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+          }
+
+          >ul{
+            font-size: 14px;
+
+            >li{
+              &:last-child{
+                margin-bottom: 20px;
+              }
+
+              >a{
+                color: #fff;
+                height: 20px;
+                line-height: 20px;
+
+                &:hover{
+                  color: rgb(88, 65, 237);
+                }
+              }
+            }
+          }
+        }//end of hide
+      }//end of family
+
+    }//end of rt-container
+  }//end of subfooter
+
+  >.mainfooter{
+    width: 800px;
+    color: rgb(155, 155, 155);
+    // border: 1px solid rgb(255, 255, 255);
+
+    ul{
+      display: flex;
+
+    }
+  }//end of mainfooter
+}//end of footer
+  
+
+  } //end of wrap
+
+} //end of body
